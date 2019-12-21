@@ -1,0 +1,21 @@
+{% block content %}
+<div class="container">
+    <div class="row">
+
+        {% if successful_results %}
+            <h1>Valid string combinations founded!</h1>
+            {% for result in successful_results %}
+            <div class="col-sm-12">
+                {% for single_value in result %}
+                    <span class="p-3">{{single_value}}</span>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+        {% else %}
+        <h1>Sorry, your string is not valid</h1>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

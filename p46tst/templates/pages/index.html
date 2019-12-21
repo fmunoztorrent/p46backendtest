@@ -1,0 +1,13 @@
+{% extends "wrapper.html" %}
+{% block content%}
+<div class="container">
+    <div class="row">
+        <h1 class="col-12">Index Foo Bar Endpoint Results</h1>
+        {% for result in index_foobar_endpoint_results %}
+        <div class="col-1">
+            {{result}}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
